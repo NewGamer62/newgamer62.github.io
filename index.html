@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Noa | NewGamer62</title>
+    <meta name="description" content="Développeur & Étudiant en Informatique. Projets personnels, applications locales et outils open-source.">
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>⚡</text></svg>">
+    <style>
+        :root {
+            --bg: #0F172A;
+            --card-bg: #1E293B;
+            --border: #334155;
+            --text-main: #F8FAFC;
+            --text-muted: #94A3B8;
+            --accent: #38BDF8;
+            --accent-glow: rgba(56, 189, 248, 0.15);
+            --radius-md: 12px;
+            --radius-sm: 8px;
+        }
+        * { box-sizing: border-box; margin: 0; padding: 0; font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif; }
+        body {
+            background: var(--bg);
+            color: var(--text-main);
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            line-height: 1.6;
+        }
+        header {
+            max-width: 900px;
+            width: 100%;
+            margin: 0 auto;
+            padding: 32px 24px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border-bottom: 1px solid var(--border);
+        }
+        .brand {
+            font-size: 1.25rem;
+            font-weight: 800;
+            letter-spacing: -0.02em;
+            color: var(--text-main);
+            text-decoration: none;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+        .brand span { color: var(--accent); }
+        nav { display: flex; gap: 16px; align-items: center; }
+        nav a {
+            color: var(--text-muted);
+            text-decoration: none;
+            font-size: 0.9rem;
+            font-weight: 500;
+            transition: color 0.15s ease;
+        }
+        nav a:hover { color: var(--text-main); }
+        .btn-gh {
+            background: var(--card-bg);
+            border: 1px solid var(--border);
+            color: var(--text-main);
+            padding: 6px 14px;
+            border-radius: var(--radius-sm);
+            text-decoration: none;
+            font-size: 0.85rem;
+            font-weight: 600;
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+            transition: all 0.15s ease;
+        }
+        .btn-gh:hover {
+            border-color: var(--accent);
+            box-shadow: 0 0 12px var(--accent-glow);
+        }
+        main {
+            max-width: 900px;
+            width: 100%;
+            margin: 0 auto;
+            padding: 60px 24px;
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            gap: 48px;
+        }
+        .hero {
+            display: flex;
+            flex-direction: column;
+            gap: 16px;
+        }
+        .badge {
+            align-self: flex-start;
+            background: var(--accent-glow);
+            color: var(--accent);
+            border: 1px solid rgba(56, 189, 248, 0.3);
+            font-size: 0.75rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+            padding: 4px 10px;
+            border-radius: 999px;
+        }
+        h1 {
+            font-size: 2.5rem;
+            font-weight: 800;
+            letter-spacing: -0.03em;
+            line-height: 1.15;
+        }
+        .hero p {
+            font-size: 1.1rem;
+            color: var(--text-muted);
+            max-width: 650px;
+        }
+        .card-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+            gap: 20px;
+        }
+        .card {
+            background: var(--card-bg);
+            border: 1px solid var(--border);
+            border-radius: var(--radius-md);
+            padding: 24px;
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+            transition: all 0.2s ease;
+        }
+        .card:hover {
+            border-color: rgba(56, 189, 248, 0.4);
+            transform: translateY(-2px);
+        }
+        .card-title {
+            font-size: 1.1rem;
+            font-weight: 700;
+            color: var(--text-main);
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+        .card-desc {
+            font-size: 0.88rem;
+            color: var(--text-muted);
+            flex: 1;
+        }
+        .card-link {
+            font-size: 0.82rem;
+            font-weight: 600;
+            color: var(--accent);
+            text-decoration: none;
+            display: inline-flex;
+            align-items: center;
+            gap: 4px;
+            margin-top: 8px;
+        }
+        .card-link:hover { text-decoration: underline; }
+        footer {
+            border-top: 1px solid var(--border);
+            max-width: 900px;
+            width: 100%;
+            margin: 0 auto;
+            padding: 24px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            font-size: 0.82rem;
+            color: var(--text-muted);
+        }
+        footer a { color: var(--text-muted); text-decoration: none; }
+        footer a:hover { color: var(--text-main); }
+    </style>
+</head>
+<body>
+
+    <header>
+        <a href="/" class="brand">⚡ Noa <span>/ NewGamer62</span></a>
+        <nav>
+            <a href="/privacy.html">Confidentialité</a>
+            <a href="https://github.com/NewGamer62" target="_blank" rel="noopener noreferrer" class="btn-gh">
+                GitHub ↗
+            </a>
+        </nav>
+    </header>
+
+    <main>
+        <section class="hero">
+            <div class="badge">Étudiant & Développeur</div>
+            <h1>Applications Locales, Outils & Projets Logiciels</h1>
+            <p>
+                Passionné par le développement d'architectures modernes, l'automatisation système et la création d'outils sur mesure centrés sur l'efficacité et la souveraineté des données.
+            </p>
+        </section>
+
+        <section class="card-grid">
+            <div class="card">
+                <div class="card-title">🖥️ Cockpit Dashboard Personnel</div>
+                <div class="card-desc">
+                    Tableau de bord local quotidien synchronisant calendrier universitaire, routines sportives Hevy, tâches prioritaires et métriques de vie en temps réel.
+                </div>
+                <a href="/privacy.html" class="card-link">Politique de confidentialité ↗</a>
+            </div>
+
+            <div class="card">
+                <div class="card-title">📂 Projets Open-Source</div>
+                <div class="card-desc">
+                    Ensemble de dépôts explorant le C++, l'intelligence artificielle, les bases de données et les architectures distribuées.
+                </div>
+                <a href="https://github.com/NewGamer62" target="_blank" rel="noopener noreferrer" class="card-link">Voir les dépôts GitHub ↗</a>
+            </div>
+
+            <div class="card">
+                <div class="card-title">🔒 Respect de la Vie Privée</div>
+                <div class="card-desc">
+                    Toutes les intégrations API personnelles (Google Calendar, Tasks, Hevy) fonctionnent exclusivement en local sans transfert de données vers des serveurs tiers.
+                </div>
+                <a href="/privacy.html" class="card-link">Consulter les règles ↗</a>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div>© 2026 Noa (NewGamer62) • Tous droits réservés</div>
+        <div>
+            <a href="/privacy.html">Règles de Confidentialité</a> • 
+            <a href="https://github.com/NewGamer62">Profil GitHub</a>
+        </div>
+    </footer>
+
+</body>
+</html>
